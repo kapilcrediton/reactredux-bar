@@ -1,18 +1,10 @@
 import { combineReducers } from 'redux';
-
-const counter = (state = 0, action) => {
-  switch (action.type) {
-    case 'INCREMENT':
-      return state + 1;
-    case 'DECREMENT':
-      return state - 1;
-    default:
-      return state;
-  }
-};
+import counter from './reducers/counter';
+import toggler from './reducers/toggler';
 
 const app = combineReducers({
-  counter
+  counter,
+  toggler
 });
 
 export default app;

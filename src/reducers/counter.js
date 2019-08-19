@@ -10,11 +10,11 @@ const counter = (state = 0, action) => {
 };
 
 export const increment = () => dispatch => {
-  dispatch({type: 'INCREMENT'});
+  setTimeout(() => dispatch({type: 'INCREMENT'}), 300);
 };
 
 export const decrement = () => dispatch => {
-  dispatch({type: 'DECREMENT'});
+  setTimeout(() => dispatch({type: 'DECREMENT'}), 300);
 };
 
 export default counter;
