@@ -16,7 +16,9 @@ const store = createStore(
   )
 );
 
-store.subscribe(() => console.log(store.getState()));
+if (process.env.NODE_ENV === 'development') {
+  store.subscribe(() => console.log(store.getState()));
+}
 
 store.dispatch({ type: 'INCREMENT' });
 
